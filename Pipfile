@@ -8,6 +8,11 @@ pyvista = "*"
 uproot = "*"
 awkward = "*"
 rich = "*"
+numpy = "*"
+matplotlib = "*"
+pandas = "*"
+awkward-pandas = "*"
+anytree = "*"
 
 [dev-packages]
 mypy = "*"

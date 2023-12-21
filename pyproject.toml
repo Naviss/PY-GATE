@@ -1,2 +1,35 @@
+[project]
+name = "py-gate"
+version = "0.0.1"
+authors = [
+    {name = "Arnaud Samson", email = "arnaud.samson@usherbrooke.ca"},
+]
+description = "Divers simulation of the LabPET II with python opengate"
+readme = "README.md"
+requires-python = ">=3.11"
+keywords = ["opengate", "LabPET II", "simulation"]
+dependencies = [
+    'pyvista',
+    'uproot',
+    'awkward',
+    'rich',
+    'numpy',
+    'matplotlib',
+    'pandas',
+    'awkward-pandas',
+]
+
 [tool.mypy]
-mypy_path = "$MYPY_CONFIG_FILE_DIR/stubs"
+python_version = 3.11
+mypy_path = "stubs"
+files = ["main.py"]
+exclude = [
+    "stubs",
+]
+namespace_packages = false
+explicit_package_bases = false
+ignore_missing_imports = true
+follow_imports = "normal"
+follow_imports_for_stubs = false
+no_site_packages = false
+no_silence_site_packages = false
